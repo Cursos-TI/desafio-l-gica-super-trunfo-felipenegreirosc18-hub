@@ -212,13 +212,13 @@ int main() {
            if (AtributoEscolhido1 == 1){
            printf("Carta 1: %lu\nCarta 2: %lu\n", Populacao1, Populacao2);
            } else if (AtributoEscolhido1 == 2){
-            printf("Carta 1: %.2f\n Carta 2: %.2f\n", Area1, Area2);
+            printf("Carta 1: %.2f\nCarta 2: %.2f\n", Area1, Area2);
            }    else if (AtributoEscolhido1 == 3){
-            printf("Carta 1: %.2f\n Carta 2: %.2f\n", PIB1, PIB2);
+            printf("Carta 1: %.2f\nCarta 2: %.2f\n", PIB1, PIB2);
            }    else if (AtributoEscolhido1 == 4){
-            printf("Carta 1: %d\n Carta 2: %d\n", NumeroDePontosTuristicos1, NumeroDePontosTuristicos2);
+            printf("Carta 1: %d\nCarta 2: %d\n", NumeroDePontosTuristicos1, NumeroDePontosTuristicos2);
            }    else if (AtributoEscolhido1 == 5){
-            printf("Carta 1: %.2f\n Carta 2: %.2f\n", DensidadePopulacional1, DensidadePopulacional2);
+            printf("Carta 1: %.2f\nCarta 2: %.2f\n", DensidadePopulacional1, DensidadePopulacional2);
            }
 
             printf("Atributo 2: %s\n",
@@ -240,7 +240,51 @@ int main() {
             printf("Carta 1: %.2f\nCarta 2: %.2f\n", DensidadePopulacional1, DensidadePopulacional2);
            }
         
-        //    
+           float valorCarta1Atributo1, valorCarta1Atributo2, valorCarta2Atributo1, valorCarta2Atributo2;
+        
+           if (AtributoEscolhido1 == 1){
+            valorCarta1Atributo1 = Populacao1;
+            valorCarta2Atributo1 = Populacao2;
+           } else if (AtributoEscolhido1 == 2){
+            valorCarta1Atributo1 = Area1;
+            valorCarta2Atributo1 = Area2;
+           } else if (AtributoEscolhido1 == 3){
+            valorCarta1Atributo1 = PIB1;
+            valorCarta2Atributo1 = PIB2;
+           } else if (AtributoEscolhido1 == 4){
+            valorCarta1Atributo1 = NumeroDePontosTuristicos1;
+            valorCarta2Atributo1 = NumeroDePontosTuristicos2;
+           } else if (AtributoEscolhido1 == 5){
+            valorCarta1Atributo1 = DensidadePopulacional1;
+            valorCarta2Atributo1 = DensidadePopulacional2;
+           }
+
+           if (AtributoEscolhido2 == 1){
+            valorCarta1Atributo2 = Populacao1;
+            valorCarta2Atributo2 = Populacao2;
+           } else if (AtributoEscolhido2 == 2){
+            valorCarta1Atributo2 = Area1;
+            valorCarta2Atributo2 = Area2;
+           } else if (AtributoEscolhido2 == 3){
+            valorCarta1Atributo2 = PIB1;
+            valorCarta2Atributo2 = PIB2;
+           } else if (AtributoEscolhido2 == 4){
+            valorCarta1Atributo2 = NumeroDePontosTuristicos1;
+            valorCarta2Atributo2 = NumeroDePontosTuristicos2;
+           } else if (AtributoEscolhido2 == 5){
+            valorCarta1Atributo2 = DensidadePopulacional1;
+            valorCarta2Atributo2 = DensidadePopulacional2;
+           }
+
+        float somaCarta1 = valorCarta1Atributo1 + valorCarta1Atributo2;
+        float somaCarta2 = valorCarta2Atributo1 + valorCarta2Atributo2;
+
+        printf("Soma dos atributos:\nCarta 1: %.2f\nCarta 2: %.2f\n", somaCarta1, somaCarta2);
+
+        (somaCarta1 > somaCarta2) ? printf("A Carta 1 venceu!\n") : 
+        (somaCarta1 < somaCarta2) ? printf("A Carta 2 venceu!\n") :
+        printf("Houve um empate!\n");
+
 
     return 0;
     }
